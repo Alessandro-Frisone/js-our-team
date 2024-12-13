@@ -36,3 +36,31 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+// DOM ELEMENTS
+const teamConatiner = document.querySelector("team-container")
+
+
+
+// FUNZIONI
+
+
+
+
+// STAMPA DELLE CARD PER OGNI MEMBRO
+let listItem =""
+for (let i = 0; i < teamMembers.length; i++) {
+  const member = teamMembers[i];
+  listItem += `
+        <div class="card-team bg-black d-flex">
+            <div class="card_img">
+                <img src="./img/male1.png" alt="Ragazzo 1">
+            </div>
+            <div class="card_info text-light p-3 me-5">
+                <h4><strong>MARCO BIANCHI</strong></h4>
+                <p>Designer</p>
+                <a id="email" href="#">marcobianchi@team.com</a>
+            </div>
+        </div>`;
+}
+teamConatiner.innerHTML = listItem;
