@@ -39,6 +39,11 @@ const teamMembers = [
 
 // DOM ELEMENTS
 const teamContainer = document.querySelector(".team-container")
+const memberFormElm = document.getElementById("member-form")
+const nameElm = document.getElementById("name")
+const roleElm = document.getElementById("role")
+const emailElm = document.getElementById("email")
+const imageElm = document.getElementById("image")
 
 
 
@@ -68,3 +73,22 @@ for (let i = 0; i < teamMembers.length; i++) {
   listItem += createCardMember(teamMembers[i])
 }
 teamContainer.innerHTML = listItem;
+
+
+// DOM EVENTS
+memberFormElm.addEventListener("submit", function(event){
+  event.preventDefault();
+  const name = nameElm.value;
+  const role = roleElm.value;
+  const email = emailElm.value;
+  const image = imageElm.value;
+  const newMember = {
+    name,
+    role,
+    email,
+    image
+  }
+  teamMembers.push(newMember);
+  const card = createCardMember(newMember);
+  teamContainer.innerHTML += card;
+});
