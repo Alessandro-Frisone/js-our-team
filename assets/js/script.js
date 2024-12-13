@@ -38,7 +38,7 @@ const teamMembers = [
 ];
 
 // DOM ELEMENTS
-const teamConatiner = document.querySelector("team-container")
+const teamContainer = document.querySelector("team-container")
 
 
 
@@ -63,4 +63,4 @@ for (let i = 0; i < teamMembers.length; i++) {
             </div>
         </div>`;
 }
-teamConatiner.innerHTML = listItem;
+teamContainer.innerHTML = listItem;
