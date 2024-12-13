@@ -1,3 +1,8 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body{
     font-family: "Fredoka", sans-serif;
 }
@@ -10,4 +15,13 @@ body{
 img{
     height: 100%;
     max-width: 130px;
+}
+.card_info{
+    width: 200px;
+}
+.team-container{
+    gap: 15px;
+}
+.card-team{
+    width: calc(100% / 3) - 15px;
 }

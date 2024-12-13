@@ -50,16 +50,16 @@ const teamContainer = document.querySelector(".team-container")
 // STAMPA DELLE CARD PER OGNI MEMBRO
 let listItem =""
 for (let i = 0; i < teamMembers.length; i++) {
-  const member = teamMembers[i];
+  const {name, role, email, img} = teamMembers[i];
   listItem += `
         <div class="card-team bg-black d-flex">
             <div class="card_img">
-                <img src="./img/male1.png" alt="Ragazzo 1">
+                <img src="./${img}" alt="${name}">
             </div>
-            <div class="card_info text-light p-3 me-5">
-                <h4><strong>MARCO BIANCHI</strong></h4>
-                <p>Designer</p>
-                <a id="email" href="#">marcobianchi@team.com</a>
+            <div class="card_info text-light p-3 me-4">
+                <h4><strong>${name}</strong></h4>
+                <p>${role}</p>
+                <a id="email" href="#">${email}</a>
             </div>
         </div>`;
 }
