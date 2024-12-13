@@ -22,6 +22,3 @@ img{
 .team-container{
     gap: 15px;
 }
-.card-team{
-    width: calc(100% / 3) - 15px;
-}

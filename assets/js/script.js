@@ -43,15 +43,9 @@ const teamContainer = document.querySelector(".team-container")
 
 
 // FUNZIONI
-
-
-
-
-// STAMPA DELLE CARD PER OGNI MEMBRO
-let listItem =""
-for (let i = 0; i < teamMembers.length; i++) {
-  const {name, role, email, img} = teamMembers[i];
-  listItem += `
+function createCardMember (member){
+  const {name, role, email, img} = member;
+  const card = `
         <div class="card-team bg-black d-flex">
             <div class="card_img">
                 <img src="./${img}" alt="${name}">
@@ -62,5 +56,15 @@ for (let i = 0; i < teamMembers.length; i++) {
                 <a id="email" href="#">${email}</a>
             </div>
         </div>`;
+   return card;     
+}
+
+
+
+// STAMPA DELLE CARD PER OGNI MEMBRO
+let listItem =""
+for (let i = 0; i < teamMembers.length; i++) {
+  const {name, role, email, img} = teamMembers[i];
+  listItem += createCardMember(teamMembers[i])
 }
 teamContainer.innerHTML = listItem;
