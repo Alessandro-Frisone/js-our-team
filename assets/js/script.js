@@ -38,7 +38,7 @@ const teamMembers = [
 ];
 
 // DOM ELEMENTS
-const teamContainer = document.querySelector("team-container")
+const teamContainer = document.querySelector(".team-container")
 
 
 
